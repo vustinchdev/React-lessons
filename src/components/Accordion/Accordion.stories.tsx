@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { action } from '@storybook/addon-actions'
 
 export default {
-    component: Accordion,
+    title: 'Accordion stories',
+    component: Accordion
 }
 
 
