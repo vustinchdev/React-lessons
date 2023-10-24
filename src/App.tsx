@@ -3,8 +3,6 @@ import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import { Rating, RatingValueType } from './components/Rating/Rating';
 import { OnOff } from './components/OnOff/OnOff';
-import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
-import { UncontrolledRating } from './components/UncontrolledRating/UncontrolledRating';
 import { UncontrolledOnOff } from './components/UncontrolledOnOff/UncontrolledOnOff';
 
 
@@ -20,7 +18,7 @@ function App() {
     <div className='App'>
 
       <Rating value={ratingValue} onClick={setRatingValue} />
-      <UncontrolledRating />
+
       <Accordion
         onClick={() => { setAccordionCollapsed(!accordionCollapsed) }}
         colapsed={accordionCollapsed}
