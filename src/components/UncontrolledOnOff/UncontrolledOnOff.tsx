@@ -3,11 +3,12 @@ import { FC, useState } from "react"
 
 type PropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
 export const UncontrolledOnOff = (props: PropsType) => {
 
-    const [on, setOn] = useState(false)
+    const [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const onStyle = {
         width: '30px',
@@ -54,22 +55,4 @@ export const UncontrolledOnOff = (props: PropsType) => {
             <div style={indicatoryStyle}></div>
         </div >
     )
-
-    // if (props.on) {
-    //     return (
-    //         <S.Wrapper>
-    //             <S.GreenSquare>on</S.GreenSquare>
-    //             <S.Square>off</S.Square>
-    //             <S.GreenCircle></S.GreenCircle>
-    //         </S.Wrapper>
-    //     )
-    // } else {
-    //     return (
-    //         <S.Wrapper>
-    //             <S.Square>on</S.Square>
-    //             <S.RedSquare >off</S.RedSquare>
-    //             <S.RedCircle></S.RedCircle>
-    //         </S.Wrapper>
-    //     )
-    // }
 }
