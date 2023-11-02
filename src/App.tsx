@@ -17,14 +17,6 @@ function App() {
   return (
     <div className='App'>
 
-      <Rating value={ratingValue} onClick={setRatingValue} />
-
-      <Accordion
-        onClick={() => { setAccordionCollapsed(!accordionCollapsed) }}
-        colapsed={accordionCollapsed}
-        titleValue='New menu' />
-      <UncontrolledOnOff onChange={setSwitchOn} />
-      <OnOff on={switchOn} onClick={setSwitchOn} />
 
       {/* <PageTitle title={'This is APP component'} />
       <PageTitle title={'Menu'} />

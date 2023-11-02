@@ -11,29 +11,40 @@ export default {
     component: Accordion
 }
 
+const callback = action('accordion mode change event fired')
+const onClickCallback = action('some item was clicked')
 
 const onChangeCallback = action('onCahnge')
 
-export const CollapsedAccordion = () => {
+export const MenuCollapsedMode = () => {
     return <Accordion
-        onClick={onChangeCallback}
-        colapsed={true}
-        titleValue='Collapsed Accordion' />
+        onChange={onChangeCallback}
+        collapsed={true}
+        titleValue='Menu'
+        items={[]}
+        onClick={onClickCallback}
+    />
 }
 
-export const OpenedAccordion = () => {
+export const UsersUncollapsedMode = () => {
     return <Accordion
-        onClick={() => { }}
-        colapsed={true}
-        titleValue='Opened Accordion' />
+        onChange={() => { }}
+        collapsed={false}
+        titleValue='Opened Accordion'
+        onClick={onClickCallback}
+        items={[{ title: 'Dmitry', value: 1 }, { title: 'Viktor', value: 2 }, { title: 'Sveta', value: 3 }]}
+    />
 }
 
 
-export const AccordionDemo = () => {
+export const ModeChanging = () => {
 
     const [collapsed, setCollapsed] = useState(false)
     return <Accordion
-        onClick={() => setCollapsed(!collapsed)}
-        colapsed={false}
-        titleValue='Opened Accordion' />
+        onChange={() => setCollapsed(!collapsed)}
+        collapsed={collapsed}
+        titleValue='Opened Accordion'
+        onClick={onClickCallback}
+        items={[{ title: 'Dmitry', value: 1 }, { title: 'Viktor', value: 2 }]}
+    />
 }
