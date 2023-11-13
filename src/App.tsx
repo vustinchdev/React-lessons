@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Accordion from './components/Accordion/Accordion';
-import { Rating, RatingValueType } from './components/Rating/Rating';
-import { OnOff } from './components/OnOff/OnOff';
-import { UncontrolledOnOff } from './components/UncontrolledOnOff/UncontrolledOnOff';
+import { RatingValueType } from './components/Rating/Rating';
+
 
 
 
@@ -16,7 +14,6 @@ function App() {
   console.log('App rendering')
   return (
     <div className='App'>
-
 
       {/* <PageTitle title={'This is APP component'} />
       <PageTitle title={'Menu'} />

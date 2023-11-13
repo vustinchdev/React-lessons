@@ -1,4 +1,4 @@
-import { FC, useState } from "react"
+import React from "react"
 
 
 type OnOffType = {
@@ -6,7 +6,7 @@ type OnOffType = {
     on: boolean
 }
 
-export const OnOff = (props: OnOffType) => {
+export const OnOff = React.memo((props: OnOffType) => {
 
     const onStyle = {
         width: '30px',
@@ -43,4 +43,4 @@ export const OnOff = (props: OnOffType) => {
             <div style={indicatoryStyle}></div>
         </div>
     )
-}
+})
