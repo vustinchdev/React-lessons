@@ -33,3 +33,23 @@ export const SimpleExample = () => {
         <button onClick={() => setCounter(counter + 1)}>counter+</button>
     </>
 }
+
+export const SetIntervalExample = () => {
+    const [counter, setCounter] = useState(1)
+
+    console.log('SetIntervalExample')
+
+    useEffect(() => {
+        console.log('setInterval')
+        setInterval(() => {
+            setCounter(state => state + 1)
+        }, 1000)
+    }, [])
+
+
+
+
+    return <>
+        counter: {counter}
+    </>
+}
